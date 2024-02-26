@@ -1,0 +1,35 @@
+{
+  "name": "pet-2-pwyll",
+  "version": "1.0.0",
+  "description": "import your snippets from pet to pwyll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carvilsi/pet-2-pwyll.git"
+  },
+  "keywords": [
+    "snippets",
+    "pet",
+    "cli",
+    "nodejs",
+    "node",
+    "exporter",
+    "importer"
+  ],
+  "author": "carvilsi@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carvilsi/pet-2-pwyll/issues"
+  },
+  "homepage": "https://github.com/carvilsi/pet-2-pwyll#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "bluebird": "^3.7.2",
+    "concat-stream": "^2.0.0",
+    "toml": "^3.0.0"
+  }
+}
+
