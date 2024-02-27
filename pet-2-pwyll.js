@@ -1,8 +1,6 @@
 const toml = require('toml');
-//const concat = require('concat-stream');
 const axios = require('axios');
 const fs = require('node:fs');
-//const bb = require('bluebird');
 
 const snippets = [];
 const config = {};
@@ -29,19 +27,16 @@ function readPetTomlFile(petSnippetTomlPath) {
 
 function usage() {
     const usageMessage = 'Usage: \n' +
-        'node index.js <path to pet snippet.toml file> <pwyll url> ' + 
+        'node pet-2-pwyll.js <path to pet snippet.toml file> <pwyll url> ' + 
         '<pwyll username> <pwyll userID> <user secret>'; 
     throw new Error(usageMessage);
 }
 
 // creating new snippet
 async function addSnippetPwyllCall(snippetObj) {
-    return await axios.post(`${config.pwyllUrl}/snippet`, {
-        snippet: snippetObj.snippet,
-        description: snippetObj.description,
-        userID: config.userID,
-        secret: config.secret,
-    });
+        snippetObj.userID = config.userID;
+        snippetObj.secret = config.secret;
+    return await axios.post(`${config.pwyllUrl}/snippet`, snippetObj);
 }
 
 async function importFromPet() {
@@ -68,5 +63,4 @@ async function importFromPet() {
         console.log(err.message);
     }
 })();
-
 

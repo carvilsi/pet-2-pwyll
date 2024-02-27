@@ -27,8 +27,6 @@
   "homepage": "https://github.com/carvilsi/pet-2-pwyll#readme",
   "dependencies": {
     "axios": "^1.6.7",
-    "bluebird": "^3.7.2",
-    "concat-stream": "^2.0.0",
     "toml": "^3.0.0"
   }
 }
